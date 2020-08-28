@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".navigation_bar_speed"
+    tools:visibility="visible">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="visible">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bar"
+            style="@style/Widget.MaterialComponents.BottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/colorPrincipal"
+            app:contentInsetEndWithActions="25dp"
+            app:fabAlignmentMode="center"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="10dp"
+            app:fabCradleVerticalOffset="5dp"
+            app:hideOnScroll="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                android:weightSum="15">
+
+                <LinearLayout
+                    android:id="@+id/navPedidos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/navIcPedido"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="0dp"
+                        app:tint="@color/colorDetalle"
+                        app:srcCompat="@drawable/ic_camion" />
+
+                    <TextView
+                        android:id="@+id/navTxtPedido"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pedidos"
+                        android:textColor="@color/textoActivoColor"
+                        android:textSize="16dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/navPerfil"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/navIcPerfil"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="0dp"
+                        app:srcCompat="@drawable/ic_perfil" />
+
+                    <TextView
+                        android:id="@+id/navTxtPerfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Perfil"
+                        android:textColor="@color/textoActivoColor"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/navGraficos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/navIcGrafico"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:padding="0dp"
+                        app:srcCompat="@drawable/ic_garficos_lineal"
+                        app:tint="@color/colorBlanco"/>
+
+                    <TextView
+                        android:id="@+id/navTxtGrafico"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gráficos"
+                        android:textAlignment="center"
+                        android:textColor="@color/textoActivoColor"
+                        android:textSize="14dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/navAjustes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/navIcAjuste"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="0dp"
+                        app:srcCompat="@drawable/ic_menu" />
+
+                    <TextView
+                        android:id="@+id/navTxtAjuste"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ajustes"
+                        android:textColor="@color/textoActivoColor"
+                        android:textSize="14dp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/navCrearPedido"
+            android:layout_width="wrap_content"
+            android:layout_height="170dp"
+            android:backgroundTint="@color/colorPrincipal"
+            app:backgroundTint="@color/colorBlanco"
+            app:fabSize="normal"
+            android:scaleType="fitXY"
+            app:layout_anchor="@+id/bar"
+            app:layout_anchorGravity="top|center"
+            app:srcCompat="@drawable/ic_add"
+            app:tint="@color/colorBlanco" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</FrameLayout>

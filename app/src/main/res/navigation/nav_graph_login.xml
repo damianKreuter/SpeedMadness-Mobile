@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_login"
+    app:startDestination="@id/personalData">
+
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.project.speedmadness.homePedidos.HomePage"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePage_to_loginHome"
+            app:destination="@id/loginHome"
+            />
+        <action
+            android:id="@+id/action_homePage_to_personalData"
+            app:destination="@id/personalData"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"/>
+        <action
+            android:id="@+id/action_homePage_to_crearPedido"
+            app:destination="@id/crearPedido"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:animator/fade_in"
+            app:popExitAnim="@android:animator/fade_in"/>
+        <action
+            android:id="@+id/action_homePage_to_verGraficos"
+            app:destination="@id/verGraficos"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_out_right"
+            app:popExitAnim="@android:anim/slide_in_left"/>
+        <action
+            android:id="@+id/action_homePage_to_configuracion"
+            app:destination="@id/configuracion"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_out_right"
+            app:popExitAnim="@android:anim/slide_in_left"/>
+        <action
+            android:id="@+id/action_homePage_to_pedidoDetalleFullDialogFragment"
+            app:destination="@id/pedidoDetalleFullDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginHome"
+        android:name="com.project.speedmadness.loginFragments.LoginHome"
+        android:label="fragment_login_home"
+        tools:layout="@layout/fragment_login_home" >
+        <action
+            android:id="@+id/action_loginHome_to_loginRegistrar"
+            app:destination="@id/loginRegistrar"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_out_right"
+            app:popExitAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_loginHome_to_loginIngresar"
+            app:destination="@id/loginIngresar"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_out_right"
+            app:popExitAnim="@android:anim/slide_in_left"/>
+        <action
+            android:id="@+id/action_loginHome_to_homePage"
+            app:destination="@id/homePage"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_out_right"
+            app:popExitAnim="@android:anim/slide_in_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/loginRegistrar"
+        android:name="com.project.speedmadness.loginFragments.LoginRegistrar"
+        android:label="fragment_login_registrar"
+        tools:layout="@layout/fragment_login_registrar" >
+        <action
+            android:id="@+id/action_loginRegistrar_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginIngresar"
+        android:name="com.project.speedmadness.loginFragments.LoginIngresar"
+        android:label="fragment_login_ingresar"
+        tools:layout="@layout/fragment_login_ingresar" >
+        <action
+            android:id="@+id/action_loginIngresar_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalData"
+        android:name="com.project.speedmadness.PersonalData"
+        android:label="fragment_personal_data"
+        tools:layout="@layout/fragment_personal_data" >
+        <action
+            android:id="@+id/action_personalData_to_homePage"
+            app:destination="@id/homePage"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit" />
+        <action
+            android:id="@+id/action_personalData_to_loginHome"
+            app:destination="@id/loginHome" />
+        <action
+            android:id="@+id/action_personalData_to_crearPedido"
+            app:destination="@id/crearPedido" />
+        <action
+            android:id="@+id/action_personalData_to_verGraficos"
+            app:destination="@id/verGraficos" />
+        <action
+            android:id="@+id/action_personalData_to_configuracion"
+            app:destination="@id/configuracion" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearPedido"
+        android:name="com.project.speedmadness.CrearPedido"
+        android:label="fragment_crear_pedido"
+        tools:layout="@layout/fragment_crear_pedido" >
+        <action
+            android:id="@+id/action_crearPedido_to_homePage"
+            app:destination="@id/homePage" />
+        <action
+            android:id="@+id/action_crearPedido_to_personalData"
+            app:destination="@id/personalData" />
+        <action
+            android:id="@+id/action_crearPedido_to_verGraficos"
+            app:destination="@id/verGraficos" />
+        <action
+            android:id="@+id/action_crearPedido_to_loginHome"
+            app:destination="@id/loginHome" />
+        <action
+            android:id="@+id/action_crearPedido_to_configuracion"
+            app:destination="@id/configuracion" />
+        <action
+            android:id="@+id/action_crearPedido_to_fragment_crear_pedido_direcciones"
+            app:destination="@id/fragment_crear_pedido_direcciones" />
+    </fragment>
+    <fragment
+        android:id="@+id/verGraficos"
+        android:name="com.project.speedmadness.VerGraficos"
+        android:label="fragment_ver_graficos"
+        tools:layout="@layout/fragment_ver_graficos" >
+        <action
+            android:id="@+id/action_verGraficos_to_crearPedido"
+            app:destination="@id/crearPedido" />
+        <action
+            android:id="@+id/action_verGraficos_to_homePage"
+            app:destination="@id/homePage" />
+        <action
+            android:id="@+id/action_verGraficos_to_personalData"
+            app:destination="@id/personalData" />
+        <action
+            android:id="@+id/action_verGraficos_to_loginHome"
+            app:destination="@id/loginHome" />
+        <action
+            android:id="@+id/action_verGraficos_to_configuracion"
+            app:destination="@id/configuracion" />
+    </fragment>
+    <fragment
+        android:id="@+id/configuracion"
+        android:name="com.project.speedmadness.configuracion"
+        android:label="fragment_configuracion"
+        tools:layout="@layout/fragment_configuracion" >
+        <action
+            android:id="@+id/action_configuracion_to_personalData"
+            app:destination="@id/personalData" />
+        <action
+            android:id="@+id/action_configuracion_to_homePage"
+            app:destination="@id/homePage" />
+        <action
+            android:id="@+id/action_configuracion_to_verGraficos"
+            app:destination="@id/verGraficos" />
+        <action
+            android:id="@+id/action_configuracion_to_crearPedido"
+            app:destination="@id/crearPedido" />
+        <action
+            android:id="@+id/action_configuracion_to_loginHome"
+            app:destination="@id/loginHome" />
+    </fragment>
+    <dialog
+        android:id="@+id/pedidoDetalleFullDialogFragment"
+        android:name="com.project.speedmadness.pedidos.verDetalles.PedidoDetalleFullDialogFragment"
+        android:label="PedidoDetalleFullDialogFragment" >
+        <action
+            android:id="@+id/action_pedidoDetalleFullDialogFragment_to_homePage"
+            app:destination="@id/homePage" />
+    </dialog>
+    <fragment
+        android:id="@+id/fragment_crear_pedido_direcciones"
+        android:name="com.project.speedmadness.fragment_crear_pedido_direcciones"
+        android:label="fragment_crear_pedido_direcciones"
+        tools:layout="@layout/fragment_crear_pedido_direcciones" >
+        <action
+            android:id="@+id/action_fragment_crear_pedido_direcciones_to_fragment_crear_pedido_datos_persona"
+            app:destination="@id/fragment_crear_pedido_datos_persona" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_crear_pedido_datos_persona"
+        android:name="com.project.speedmadness.Fragment_crear_pedido_datos_persona"
+        android:label="fragment_crear_pedido_datos_persona"
+        tools:layout="@layout/fragment_crear_pedido_datos_persona" />
+</navigation>

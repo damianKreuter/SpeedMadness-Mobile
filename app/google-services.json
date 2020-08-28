@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "711439460853",
+    "firebase_url": "https://spreedmadness.firebaseio.com",
+    "project_id": "spreedmadness",
+    "storage_bucket": "spreedmadness.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:711439460853:android:2f3784812cb7c07e2818bc",
+        "android_client_info": {
+          "package_name": "com.project.speedmadness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "711439460853-kftqbq71ghqpiqmuffs313rvnaqb6fr8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM1BWwE_Q-TfVpAS2LbhksGCrhoK1TzBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "711439460853-kftqbq71ghqpiqmuffs313rvnaqb6fr8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

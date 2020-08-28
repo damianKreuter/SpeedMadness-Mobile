@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/degrade_fondo"
+    tools:context=".loginFragments.LoginIngresar">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_titulo_pedido"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="124dp"
+            android:hint="Email"
+            android:textColorHint="@color/colorPrincipal"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/EditTextUserIngreso"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorPrincipal"
+                android:textColorLink="@color/colorPrincipal"></com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_password"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:hint="Contraseña"
+            android:textColorHint="@color/colorPrincipal"
+            app:endIconMode="password_toggle"
+            app:helperText="Mínimo 6 caracteres"
+            app:helperTextEnabled="true"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_titulo_pedido">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/EditTextContraseniaInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                android:textColor="@color/colorPrincipal"
+                android:textColorLink="@color/colorPrincipal"></com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonIngresarLoginIngresar"
+            android:layout_width="250dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/boton_custom_solido"
+            android:text="Ingresar"
+            android:textColor="@color/colorBlanco"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/input_layout_password"
+            app:layout_constraintHorizontal_bias="0.583"
+            app:layout_constraintStart_toStartOf="@+id/input_layout_password"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_password"
+            app:layout_constraintVertical_bias="0.061" />
+
+
+        <TextView
+            android:id="@+id/textViewOlvidasteContrasenia"
+            android:layout_width="247dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="¿Olvidaste tu contraseña?"
+            android:textColor="@color/colorBlanco"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/buttonIngresarLoginIngresar"
+            app:layout_constraintStart_toStartOf="@+id/buttonIngresarLoginIngresar"
+            app:layout_constraintTop_toBottomOf="@+id/buttonIngresarLoginIngresar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

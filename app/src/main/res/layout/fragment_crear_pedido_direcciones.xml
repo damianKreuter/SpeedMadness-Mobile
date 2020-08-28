@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_direccion_origen"
+        android:layout_width="351dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="15dp"
+        android:hint="Origen"
+        android:textColorHint="@color/colorPrincipal"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewIconoDetalle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/EditTextDireccionOrigenCrear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/colorPrincipal"
+            android:textColorLink="@color/colorPrincipal"
+            android:transitionName="@string/share_pedido_detalle_titulo"
+            android:inputType="none"></com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_direccion_destino"
+        android:layout_width="351dp"
+        android:layout_height="56dp"
+        android:hint="Destino"
+        android:textColorHint="@color/colorPrincipal"
+        android:layout_marginTop="10dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewIconoDetalle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_direccion_origen">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/EditTextDireccionDestinoCrear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="none"
+            android:textColor="@color/colorPrincipal"
+            android:textColorLink="@color/colorPrincipal"
+            android:transitionName="@string/share_pedido_detalle_titulo"></com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.chip.Chip
+        style="@style/Widget.MaterialComponents.Chip.Choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Idea y vuelta"
+        app:chipIcon="@drawable/ic_shopping"
+        app:chipIconVisible="true"
+        app:layout_constraintEnd_toEndOf="@+id/input_direccion_destino"
+        app:layout_constraintTop_toBottomOf="@+id/input_direccion_destino" />
+
+    <Button
+        android:id="@+id/buttonCrearPedidoPasarADatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:text="A cargar datos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

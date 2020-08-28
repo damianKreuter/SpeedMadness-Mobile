@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_dialog_crear_pedido"
+    app:startDestination="@id/fr_crear_pedido_paso1">
+
+    <fragment
+        android:id="@+id/fr_crear_pedido_paso1"
+        android:name="com.project.speedmadness.Fr_crear_pedido_paso1"
+        android:label="fragment_fr_crear_pedido_paso1"
+        tools:layout="@layout/fragment_fr_crear_pedido_paso1" >
+        <action
+            android:id="@+id/action_fr_crear_pedido_paso1_to_cargarDirecciones"
+            app:destination="@id/cargarDirecciones"
+            app:enterAnim="@anim/slide_right"
+            app:exitAnim="@anim/slide_left"
+            app:popEnterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/cargarDirecciones"
+        android:name="com.project.speedmadness.cargarDirecciones"
+        android:label="dialog_fragment_cargar_direcciones"
+        tools:layout="@layout/dialog_fragment_cargar_direcciones" >
+        <action
+            android:id="@+id/action_cargarDirecciones_to_cargarDatosPersona"
+            app:destination="@id/cargarDatosPersona"
+            app:enterAnim="@anim/slide_right"
+            app:exitAnim="@anim/slide_left"
+            app:popEnterAnim="@anim/slide_left"
+            app:popExitAnim="@anim/slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/cargarDatosPersona"
+        android:name="com.project.speedmadness.cargarDatosPersona"
+        android:label="dialog_fragment_cargar_datos_persona"
+        tools:layout="@layout/dialog_fragment_cargar_datos_persona" />
+</navigation>

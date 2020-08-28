@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/degrade_fondo"
+    tools:context=".loginFragments.LoginHome">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/buttonIngresarLoginHome"
+            android:layout_width="260dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/boton_custom_solido"
+            android:text="Ingresar"
+            android:textColor="@color/colorBlanco"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/input_layout_password"
+            app:layout_constraintHorizontal_bias="0.583"
+            app:layout_constraintStart_toStartOf="@+id/input_layout_password"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_password"
+            app:layout_constraintVertical_bias="0.061" />
+
+        <Button
+            android:id="@+id/buttonRegistrarLoginHome"
+            android:layout_width="260dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/colorDetalle"
+            android:text="Registrar"
+            android:textColor="@color/colorPrincipal"
+            android:textSize="18dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/input_layout_password"
+            app:layout_constraintHorizontal_bias="0.583"
+            app:layout_constraintStart_toStartOf="@+id/input_layout_password"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_password"
+            app:layout_constraintVertical_bias="0.061" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="212dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="O ingresa con" />
+
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/icGoogle"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                tools:srcCompat="@drawable/ic_google" />
+
+            <ImageView
+                android:id="@+id/icFacebook"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_facebook" />
+
+            <ImageView
+                android:id="@+id/icTwitter"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_twitter" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

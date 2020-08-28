@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#831703</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#F6EEED</color>
+    <color name="colorDetalle">#F8DD99</color>
+    <color name="colorSecundario">#FFAF25</color>
+    <color name="colorPrincipalSecundario">#FD7600</color>
+    <color name="colorPrincipal">#E12A09</color>
+    <color name="colorPrincipalOscuro">#831703</color>
+    <color name="colorPrimaryCursorText">#F6EEED</color>
+    <color name="colorBlanco">#F6EEED</color>
+    <color name="activoColor">@color/colorDetalle</color>
+    <color name="textoActivoColor">@color/colorBlanco</color>
+    <color name="textoInactivoColor">#8F8F8F</color>
+    <color name="inactivoColor">#878787</color>
+    <color name="cardViewFondo">#FFF7DD</color>
+    <color name="black_overlay">#66000000</color>
+</resources>

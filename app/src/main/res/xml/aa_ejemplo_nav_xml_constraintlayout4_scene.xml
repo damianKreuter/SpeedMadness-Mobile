@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="500">
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/grafico">
+        <Constraint
+            android:id="@+id/navIcGrafico"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="25dp"
+            android:padding="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.71"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:srcCompat="@drawable/ic_garficos_lineal"
+            motion:tint="@color/colorDetalle"
+            />
+        <Constraint
+            android:id="@+id/navTxtGrafico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="Gráficos"
+            android:textAlignment="center"
+            android:textColor="@color/textoActivoColor"
+            android:textSize="14dp"
+            android:visibility="visible"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="@+id/navIcGrafico"
+            motion:layout_constraintStart_toStartOf="@+id/navIcGrafico"
+            motion:layout_constraintTop_toBottomOf="@+id/navIcGrafico"
+            />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/ajuste">
+        <Constraint
+            android:id="@+id/navTxtAjuste"
+            motion:layout_constraintEnd_toEndOf="@+id/navIcAjuste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@+id/navIcAjuste"
+            motion:layout_constraintStart_toStartOf="@+id/navIcAjuste"
+            android:layout_marginTop="1dp" />
+        <Constraint
+            android:id="@+id/navIcAjuste"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="25dp"
+            android:padding="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.9"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:srcCompat="@drawable/ic_menu"
+            motion:tint="@color/colorDetalle"/>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/pedido"
+
+        >
+        <Constraint
+            android:id="@+id/navIcPedido"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="25dp"
+            android:padding="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:srcCompat="@drawable/ic_camion"
+            motion:tint="@color/colorDetalle"
+            />
+        <Constraint
+            android:id="@+id/navTxtPedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pedidos"
+            android:textColor="@color/textoActivoColor"
+            android:textSize="14dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="@+id/navIcPedido"
+            motion:layout_constraintStart_toStartOf="@+id/navIcPedido"
+            motion:layout_constraintTop_toBottomOf="@+id/navIcPedido"
+            />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/perfil"
+
+        >
+        <Constraint
+            android:id="@+id/navIcPerfil"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="25dp"
+            android:padding="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.3"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:srcCompat="@drawable/ic_perfil"
+            motion:tint="@color/colorDetalle"
+            />
+        <Constraint
+            android:id="@+id/navTxtPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="Perfil"
+            android:textColor="@color/textoActivoColor"
+            android:textSize="14sp"
+            android:visibility="visible"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="@+id/navIcPerfil"
+            motion:layout_constraintStart_toStartOf="@+id/navIcPerfil"
+            motion:layout_constraintTop_toBottomOf="@+id/navIcPerfil"
+            />
+    </ConstraintSet>
+
+    <Transition
+        android:id="@+id/pasajeGraficoAjuste"
+        motion:constraintSetStart="@+id/grafico"
+        motion:constraintSetEnd="@+id/ajuste"
+        motion:duration="500">
+        <OnClick
+            motion:targetId="@+id/buttonNavAjuste"
+            motion:clickAction="transitionToEnd"
+            />
+    </Transition>
+
+    <Transition
+        android:id="@+id/pasajeGraficoPedido"
+        motion:constraintSetStart="@+id/grafico"
+        motion:constraintSetEnd="@+id/pedido"
+        motion:duration="500">
+        <OnClick
+            motion:targetId="@+id/buttonNavPedido"
+            motion:clickAction="transitionToEnd"
+            />
+    </Transition>
+
+    <Transition
+        android:id="@+id/pasajeGraficoPerfil"
+        motion:constraintSetStart="@+id/grafico"
+        motion:constraintSetEnd="@+id/perfil"
+        motion:duration="500">
+        <OnClick
+            motion:targetId="@+id/buttonNavPerfil"
+            motion:clickAction="transitionToEnd"
+            />
+    </Transition>
+
+    <Transition
+        android:id="@+id/pasajePedidoAjuste"
+        motion:constraintSetStart="@+id/pedido"
+        motion:constraintSetEnd="@+id/ajuste"
+        motion:duration="500">
+        <OnClick
+            motion:targetId="@+id/buttonNavAjuste"
+            motion:clickAction="transitionToEnd"
+            />
+    </Transition>
+
+    <Transition
+        android:id="@+id/pasajePedidoGrafico"
+        motion:constraintSetStart="@+id/pedido"
+        motion:constraintSetEnd="@+id/grafico"
+        motion:duration="500">
+        <OnClick
+            motion:targetId="@+id/buttonNavGrafico"
+            motion:clickAction="transitionToEnd"
+            />
+    </Transition>
+
+    <Transition
+        android:id="@+id/pasajePedidoPerfil"
+        motion:constraintSetStart="@+id/pedido"
+        motion:constraintSetEnd="@+id/perfil"
+        motion:duration="500">
+        <OnClick
+            motion:targetId="@+id/buttonNavPerfil"
+            motion:clickAction="transitionToEnd"
+            />
+    </Transition>
+
+    <Transition
+        android:id="@+id/pasajePerfilGrafico"
+        motion:constraintSetStart="@+id/perfil"
+        motion:constraintSetEnd="@+id/grafico"
+        motion:duration="500">
+        <OnClick
+            motion:targetId="@+id/buttonNavGrafico"
+            motion:clickAction="transitionToEnd"
+            />
+    </Transition>
+
+    <Transition
+        android:id="@+id/pasajePerfilPedido"
+        motion:constraintSetStart="@+id/perfil"
+        motion:constraintSetEnd="@+id/pedido"
+        motion:duration="500">
+        <OnClick
+            motion:targetId="@+id/buttonNavPedido"
+            motion:clickAction="transitionToEnd"
+            />
+    </Transition>
+
+    <Transition
+        android:id="@+id/pasajePerfilAjuste"
+        motion:constraintSetStart="@+id/perfil"
+        motion:constraintSetEnd="@+id/ajuste"
+        motion:duration="500">
+        <OnClick
+            motion:targetId="@+id/buttonNavAjuste"
+            motion:clickAction="transitionToEnd"
+            />
+    </Transition>
+
+    <Transition
+        android:id="@+id/pasajeAjustePedido"
+        motion:constraintSetStart="@+id/ajuste"
+        motion:constraintSetEnd="@+id/pedido"
+        motion:duration="500">
+        <OnClick
+            motion:targetId="@+id/buttonNavPedido"
+            motion:clickAction="transitionToEnd"
+            />
+    </Transition>
+
+    <Transition
+        android:id="@+id/pasajeAjusteGrafico"
+        motion:constraintSetStart="@+id/ajuste"
+        motion:constraintSetEnd="@+id/grafico"
+        motion:duration="500">
+        <OnClick
+            motion:targetId="@+id/buttonNavGrafico"
+            motion:clickAction="transitionToEnd"
+            />
+    </Transition>
+
+    <Transition
+        android:id="@+id/pasajeAjustePerfil"
+        motion:constraintSetStart="@+id/ajuste"
+        motion:constraintSetEnd="@+id/perfil"
+        motion:duration="500">
+        <OnClick
+            motion:targetId="@+id/buttonNavAjuste"
+            motion:clickAction="transitionToEnd"
+            />
+    </Transition>
+</MotionScene>
